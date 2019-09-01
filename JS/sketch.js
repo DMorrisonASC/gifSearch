@@ -3,19 +3,19 @@ const images = document.getElementById("images");
 const search = document.getElementById("search");
 
 const submit = document.getElementById("submit");
-submit.addEventListener("click", function() {
+submit.addEventListener("click", function () {
   getData(search.value);
 });
 function getData(query) {
   fetch(
-    "http://api.giphy.com/v1/gifs/search?q=" +
-      query +
-      "&api_key=8UHgk4rc0ictTp8kMXNGHbeJAWwg19yn&limit=5"
+    "https://api.giphy.com/v1/gifs/search?q=" +
+    query +
+    "&api_key=8UHgk4rc0ictTp8kMXNGHbeJAWwg19yn&limit=5"
   )
-    .then(function(response) {
+    .then(function (response) {
       return response.json();
     })
-    .then(function(myJson) {
+    .then(function (myJson) {
       renderData(myJson);
       //   console.log(JSON.stringify(myJson));
     });
