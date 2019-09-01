@@ -1,1 +1,0 @@
-# gifSearch - A web application that finds the gifs you want using GIFPHY Api.
